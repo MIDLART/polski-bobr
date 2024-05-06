@@ -1,10 +1,12 @@
 body {
-    margin: 0;
+    margin: 20;
     font-family: "Roboto", sans-serif;
 
     font-size: 32px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #efeaea;
+
+    width: 1500px;
 }
 
 *,
@@ -17,8 +19,12 @@ body {
     background-color: #23201d;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
+}
+
+.Main {
+    margin-left: 20px;
 }
 
 .Doc {
@@ -27,4 +33,23 @@ h1 {
 
 .bobr_img {
     text-align: right;
+}
+
+.frame {
+    border: 4px solid #282626;
+    background-color: #3e3c3c;
+    width: 1000px;
+    margin: 20px;
+}
+
+.title {
+    background-color: #282626;
+    margin: 5px;
+}
+
+.code {
+    padding: 20px;
+    margin: 20px;
+    padding: 10px;
+    margin: 5px;
 }
