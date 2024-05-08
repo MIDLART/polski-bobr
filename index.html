@@ -35,7 +35,7 @@
         </div>
 
         <div class="frame">
-            <p class="title">Переменная FIVE</p>
+            <p class="title">&nbsp;Переменная FIVE</p>
 
             <p class="code">
                 let FIVE<br>
@@ -53,12 +53,32 @@
                 Для вызова функции необходимо заключать её название в квадратные скобки, 
                 а аргумент функции указать в фигурных скобках <mark>[FIVE] { 0 }</mark>.
                 Так как функция FIVE не имеет аргументов, ей передаётся незначащий ноль.
+                <br>&nbsp;
+            </p>
+        </div>
+
+        <div class="Text">
+            <p> 
+                В соответствии с функциональным программированием в языке определены операции аппликации и абстракции.
+                Аппликация - применение или вызов функции по отношению к заданному аргументу. 
+                Абстракция - строит функции по заданным выражениям. 
+                Это позволяет конструировать новые функции.
             </p>
         </div>
 
         <div class="Text">
             <p>
-                Лямбда выражения обозначаются ключевым словом <mark><b>action</b></mark>.
+                Функции в Bobr# обладают свойством замыкания. 
+                То есть функции могут ссылаться на переменные, 
+                объявленные вне тела этой функции и не являющиеся её параметрами.
+            </p>
+        </div>
+
+        <div class="Text">
+            <p>
+                Лямбда выражения обозначаются ключевым словом <mark><b>action</b></mark>.<br>
+                Если <mark><b>action</b></mark> возвращает только самого себя и не учуствет в арифметическом выражении, 
+                то нужно возвращать его с умножением на 1 или писать в качестве его арумента <mark>{ null }</mark>.
             </p>
         </div>
 
@@ -66,7 +86,7 @@
             <h3><br>Арифметические операции</h3>
 
             <p>
-                В языке определенные следующие арифметические операции:
+                В языке определены следующие арифметические операции:
                 <ul style="margin-left: 20px;">
                     <li>+ &mdash; сложение двух чисел</li>
                     <li>- &mdash; вычитание одного число из другого</li>
@@ -93,7 +113,7 @@
         </div>
 
         <div class="frame">
-            <p class="title">Арифметика</p>
+            <p class="title">&nbsp;Арифметика</p>
 
             <p class="code">
                 let a<br>
@@ -119,6 +139,194 @@
                 Корни уравнения: <mark>x1 = 1</mark> и <mark>x2 = -3</mark>.
                 Программа выводит результат (сумму x1 и x2) равный -2.
             </p>
+        </div>
+
+        <div class="Text"> 
+            <p>
+                <dl>
+                    Также в языке определены
+                    <dt style="margin-left: 10px;">Операции сравнения:</dt>
+                    <dd>
+                        <ul style="margin-left: 5px;">
+                            <li>> &mdash; больше</li>
+                            <li>>= &mdash; больше или равно</li>
+                            <li>< &mdash; меньше</li>
+                            <li><= &mdash; меньше или равно</li>
+                            <li>= &mdash; равны</li>
+                            <li>!= &mdash; не равны</li>
+                        </ul>
+                    </dd>
+                    <dt style="margin-left: 10px;">Логические операции:</dt>
+                    <dd>
+                        <ul style="margin-left: 5px;">
+                            <li>|| &mdash; дизъюнкция</li>
+                            <li>&& &mdash; конъюнкция</li>
+                            <li>! &mdash; инверсия</li>
+                        </ul>
+                    </dd>
+                </dl>
+            </p>
+        </div>
+
+        <div class="Text"> 
+            <p>
+                Bobr# работает как с целыми числами, так и с дробными.<br>
+                Во втором случае дробная часть числа пишется через запятую: <mark>1,5</mark>.<br>
+                Преобразование типов происходит неявно, поэтому выражение, 
+                в котором имеются два разных типа, будет корректно выполняться без каких либо явных приведений типа.
+            </p>
+        </div>
+
+        <div class="Text"> 
+            <p>
+                Инфиксная форма записи выражений является не единственной возможной для Bobr#.
+                Особенностью языка является возможность записи арифметических выражений в польской нотации.
+                Для это арфметическое выражение нужно писать без угловых скобок. 
+            </p>
+        </div>
+
+        <div class="Text">
+            <h3><br>Возможности языка</h3>
+
+            <h4>Оператор условия</h4>
+            <p>
+                В языке определён оператор условия <mark><b>if-else</b></mark>.<br>
+                Если условие идущие после ключевого слова <mark><b>if</b></mark> верно,
+                то выполняется операция идущиая на следующей строке после <mark><b>if</b></mark>.
+                Иначе выполняется операция после <mark><b>else</b></mark>.<br>
+                Оператор <mark><b>if-else</b></mark> допускает вложенность.
+                <br>&nbsp;
+            </p>
+        </div>
+
+        <div class="Text">
+            <h4>Рекурсивные функции</h4>
+
+            <p>
+                В Bobr# есть возможность создавать рекурсивные функции.<br>
+                Делается это при помощи ключевого слова <mark><b>let_rec</b></mark>.<br>
+                В отличие от функции заданной через <mark><b>let</b></mark>, 
+                функция созданная по средством <mark><b>let_rec</b></mark>
+                может вызывать саму себя в теле функции.
+            </p>
+
+            <p>
+                Используя <mark><b>let_rec</b></mark> 
+                можем написать рекурсивную функцию нахождения факториала числа.
+            </p>
+        </div>
+
+        <div class="frame">
+            <p class="title">&nbsp;Факториал 10</p>
+
+            <p class="code">
+                let_rec fact<br>
+                &emsp;&nbsp;action x<br>   
+                &emsp;&nbsp;&emsp;&nbsp;if << [x] <= 1 >><br> 
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< 1 >><br>
+                &emsp;&nbsp;&emsp;&nbsp;else<br>   
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< [x] { null } * [fact] { << [x] - 1 >> } >><br>
+                            <br>
+                << [fact] { 10 } >>
+            </p>
+
+        </div>
+
+        <div class="Text">
+            <p>
+                После выполнения рекурсивной функции, программа выведет нам ответ: <mark>3 628 800</mark>.
+                <br>&nbsp;
+            </p>
+        </div>
+
+        <div class="Text">
+            <h4>Комментирование кода</h4>
+            <p>
+                При написании программы, 
+                может понадобиться возможность оставить комментарий к коду или 
+                способ убрать часть кода из контекста выполнения программы во время написания или отладки кода.
+            </p>
+            <p>
+                Для этого в Bobr# введена возможность комментирования кода, с помощью оператора решётки, 
+                который стоит перед и после комментария <mark><b># ... #</b></mark>. 
+                Часть кода, заключённая в комментарий, игнорируется во время выполнения программы.
+            </p>
+        </div>
+
+        <div class="frame">
+            <p class="title">&nbsp;Комментарии</p>
+
+            <p class="code">
+                # Однострочный комментарий #<br>
+                <br>
+                #<br>
+                &emsp;&nbsp;Комментарий <br>
+                &emsp;&nbsp;на<br>
+                &emsp;&nbsp;несколько<br>
+                &emsp;&nbsp;строк<br>
+                #
+            </p>
+
+        </div>
+
+        <div class="Text">
+            <h4>Функция с двумя аргументами, упаковка чисел</h4>
+
+            <p>
+                По стандарту, в соответсвии с каррированием, функции в языке могут принимать только один аргумент.
+                Но это можно исправить с мощью упаковки аргументов.<br>
+                Для этого существуют специальные функции с приставкой <mark><b>zip</b></mark>, 
+                которые упаковывают два аргумента в одно число, а внутри функции распаковывают их.
+            </p>
+
+            <p>
+                Преведём пример программы, которая будет использовать упаковку аргументов.<br>
+                Программа будет вычислять наибольший общий делитель для двух чисел меньших 10000.
+            </p>
+        </div>
+        
+        <div class="frame">
+            <p class="title">&nbsp;Вычисление НОД для двух чисел</p>
+
+            <p class="code">
+                let a action go_a << 5 * 5 * 3 * 7 >><br>
+                let b action go_b << 5 * 3 >><br>
+                <br>
+                let zip_first<br>
+                &emsp;&nbsp;action go_zip_first<br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [go_zip_first] * 10000 >><br>
+                let zip_second<br>
+                &emsp;&nbsp;action go_zip_second<br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [go_zip_second] * 1 >> # или [go_zip_second] { null } #<br>
+                let unzip_first <br>
+                &emsp;&nbsp;action go_unzip_first<br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [go_unzip_first] / 10000 >><br>
+                let unzip_second<br>
+                &emsp;&nbsp;action go_unzip_second<br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [go_unzip_second] % 10000 >>	<br>
+                let first <br>
+                &emsp;&nbsp;action go_first <br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [unzip_first] { [go_first] } >><br>
+                let second <br>
+                &emsp;&nbsp;action go_second <br>
+                &emsp;&nbsp;&emsp;&nbsp;<< [unzip_second] { [go_second] } >><br>
+                let_rec NOD <br>
+                &emsp;&nbsp;action zip<br>
+                &emsp;&nbsp;&emsp;&nbsp;if << [first] { [zip] } != 0 && [second] { [zip] } != 0 >><br>
+                            <br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;if << [first] { [zip] } > [second] { [zip] } >>	<br>
+                                <br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< [NOD] { << [zip_first] { << [first] { [zip] } % [second] {<br> 
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;[zip] } >> } + [zip_second] { [second] { [zip] } }  >> } >> <br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;else<br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< [NOD] { << [zip_first] { [first] { [zip] } } + [zip_second] { <br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< [second] { [zip] } % [first] { [zip] } >> } >> } >> <br>
+                &emsp;&nbsp;&emsp;&nbsp;else<br>
+                &emsp;&nbsp;&emsp;&nbsp;&emsp;&nbsp;<< [first] { [zip] } + [second] { [zip] } >><br>
+                            <br>
+                << [NOD] { << [zip_first] { [a] { 0 } } + [zip_second] { [b] { 0 } } >> } >><br>
+            </p>
+
         </div>
 
     </body>
