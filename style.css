@@ -23,6 +23,10 @@ h1, h2 {
     margin: 0;
 }
 
+h4 {
+    line-height: 0;
+}
+
 .Main {
     margin-left: 20px;
 }
