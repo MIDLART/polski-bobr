@@ -48,8 +48,20 @@ h1, h2 {
 }
 
 .code {
-    padding: 20px;
-    margin: 20px;
     padding: 10px;
     margin: 5px;
+    /* white-space: pre; */
+}
+
+mark {
+    background-color: #3e3c3c;
+    color: #efeaea;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: nowrap;
+}
+
+.Text {
+    margin-left: 20px;
+    width: 950px;
 }
